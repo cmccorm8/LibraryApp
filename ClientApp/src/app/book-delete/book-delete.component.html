@@ -1,0 +1,22 @@
+<form>
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" [(ngModel)]="title" name="title" disabled>
+    </div>
+    <div class="mb-3">
+        <label for="authorName" class="form-label">Author Name</label>
+        <input type="text" class="form-control" [(ngModel)]="authorName" name="authorName" disabled>
+    </div>
+    <div class="mb-3">
+        <label for="isbnNumber" class="form-label">Isbn Number</label>
+        <input type="text" class="form-control" [(ngModel)]="isbnNumber" name="isbnNumber" disabled>
+    </div>
+    <div>
+        <p class="float-start m-2"><strong>Are You Sure You Want To Delete?</strong></p>
+        <button type="button" class="btn btn-secondary float-end m-2" data-bs-dismiss="modal" color="accent">Cancel</button>
+        <button type="button" class="btn btn-danger float-end m-2" (click)="deleteBook(book.id)">Delete</button>
+    </div>
+     
+</form>
+
+

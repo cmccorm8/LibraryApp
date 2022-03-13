@@ -1,0 +1,17 @@
+<form>
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" [(ngModel)]="title" name="title">
+    </div>
+    <div class="mb-3">
+        <label for="authorName" class="form-label">Author Name</label>
+        <input type="text" class="form-control" [(ngModel)]="authorName" name="authorName">
+    </div>
+    <div class="mb-3">
+        <label for="isbnNumber" class="form-label">Isbn Number</label>
+        <input type="text" class="form-control" [(ngModel)]="isbnNumber" name="isbnNumber">
+    </div>
+    <button type="button" class="btn btn-primary float-end m-2" (click)="createBook()" *ngIf="book.id==0">Create Book</button>
+    <button type="button" class="btn btn-primary float-end m-2" (click)="updateBook()" *ngIf="book.id!=0">Updated Book</button>
+    <button type="button" class="btn btn-secondary float-end m-2" data-bs-dismiss="modal" color="accent">Cancel</button>
+</form>
